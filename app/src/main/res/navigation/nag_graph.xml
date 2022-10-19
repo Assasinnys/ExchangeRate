@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nag_graph"
+    app:startDestination="@id/popularFragment">
+
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.dmitryzenevich.exchangerate.ui.popular.PopularFragment"
+        android:label="@string/title_popular_rates" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.dmitryzenevich.exchangerate.ui.favorite.FavoritesFragment"
+        android:label="@string/title_favorite_rates" />
+
+    <fragment
+        android:id="@+id/sortItem"
+        android:name="com.dmitryzenevich.exchangerate.ui.sort.SortFragment"
+        android:label="@string/title_menu_sort" />
+</navigation>

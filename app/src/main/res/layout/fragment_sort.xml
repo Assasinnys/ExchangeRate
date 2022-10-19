@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dmitryzenevich.exchangerate.ui.sort.SortViewModel" />
+    </data>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/alphabetAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={viewModel.isAlphabetAsc}"
+            android:text="@string/sort_alphabet_asc" />
+
+        <RadioButton
+            android:id="@+id/alphabetDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={viewModel.isAlphabetDesc}"
+            android:text="@string/sort_alphabet_desc" />
+
+        <RadioButton
+            android:id="@+id/rateAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={viewModel.isRateAsc}"
+            android:text="@string/sort_rate_asc" />
+
+        <RadioButton
+            android:id="@+id/rateDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={viewModel.isRateDesc}"
+            android:text="@string/sort_rate_desc" />
+    </RadioGroup>
+</layout>

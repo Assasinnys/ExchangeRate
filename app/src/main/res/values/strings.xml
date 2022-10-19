@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Exchange Rate</string>
+
+<!--   Bottom Menu-->
+    <string name="menu_popular">Popular</string>
+    <string name="menu_favorites">Favorites</string>
+
+<!--    Toolbar Titles-->
+    <string name="title_popular_rates">Latest Rates</string>
+    <string name="title_favorite_rates">Favorite Rates</string>
+
+<!--    Sorting-->
+    <string name="title_menu_sort">Sort</string>
+    <string name="sort_alphabet_asc">Alphabetically ascending</string>
+    <string name="sort_alphabet_desc">Alphabetically descending</string>
+    <string name="sort_rate_asc">Sort by value ascending</string>
+    <string name="sort_rate_desc">Sort by value descending</string>
+
+</resources>
