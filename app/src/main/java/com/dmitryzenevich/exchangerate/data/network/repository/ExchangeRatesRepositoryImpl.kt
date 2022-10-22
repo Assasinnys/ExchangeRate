@@ -17,7 +17,7 @@ class ExchangeRatesRepositoryImpl @Inject constructor(
 ) : ExchangeRatesRepository {
 
     override suspend fun refreshLatestRates(base: String) {
-        val rates = remoteSource.getLatestRates(base).rates.toLocalRates()
+        val rates = remoteSource.getLatestRates(base).toLocalRates()
         ratesDao.insertAll(rates)
     }
 
@@ -42,7 +42,7 @@ class ExchangeRatesRepositoryImpl @Inject constructor(
     }
 
     override suspend fun refreshFavoriteRates(base: String) {
-        val rates = remoteSource.getLatestRates(base).rates.toLocalFavoriteRates()
+        val rates = remoteSource.getLatestRates(base).toLocalFavoriteRates()
         val favoriteRates = favoritesDao.getFavoriteRates()
         val favoritesForUpdate = rates.filter { fetchedRates ->
             favoriteRates.find { fetchedRates.rateName == it.rateName } != null
